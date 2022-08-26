@@ -8,7 +8,8 @@ public class CardDeck : MonoBehaviour
 {
     //shows carddeck and contains rules for interaction
     public List<CardDescription> cards;
-    public Image cardDisplay;
+    //public Image cardDisplay;
+    public GameObject cardPrefab;
     public void ClickOnDeck()
     {
         Debug.Log("deck clicked");
@@ -27,8 +28,10 @@ public class CardDeck : MonoBehaviour
 
         cards.Remove(pickedCard);
 
-        cardDisplay.sprite = pickedCard.cardpicture;
-        cardDisplay.gameObject.SetActive(true);
+        //cardDisplay.sprite = pickedCard.cardpicture;
+        //cardDisplay.gameObject.SetActive(true);
+        GameObject cardInScene = Instantiate(cardPrefab, transform.parent);
+        cardInScene.GetComponent<Image>().sprite = pickedCard.cardpicture;
 
         if (cards.Count == 0) gameObject.SetActive(false);
     }
