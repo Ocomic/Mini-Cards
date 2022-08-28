@@ -11,6 +11,7 @@ public class CardDeck : MonoBehaviour
     //public Image cardDisplay;
     public GameObject cardPrefab;
     public GameObject cardContainer;
+    public int remainingTurns = 4;
 
     public void ClickOnDeck()
     {
@@ -29,6 +30,7 @@ public class CardDeck : MonoBehaviour
         Debug.Log("picked card =" + pickedCard.cardpicture + "of position=" + randomStackPosition);
 
         cards.Remove(pickedCard);
+        remainingTurns -= 1; // is the same like remainingTurns = remainingTurns - 1; 
 
         //cardDisplay.sprite = pickedCard.cardpicture;
         //cardDisplay.gameObject.SetActive(true);
@@ -36,7 +38,8 @@ public class CardDeck : MonoBehaviour
         cardInScene.GetComponent<Image>().sprite = pickedCard.cardpicture;
         cardInScene.GetComponent<Button>().enabled = false;
 
-        if (cards.Count == 0) gameObject.SetActive(false);
+
+        if (cards.Count == 0 || remainingTurns == 0) gameObject.SetActive(false);
     }
 
 }
