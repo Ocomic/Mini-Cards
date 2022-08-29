@@ -8,10 +8,28 @@ public class CardDeck : MonoBehaviour
 {
     //shows carddeck and contains rules for interaction
     public List<CardDescription> cards;
-    //public Image cardDisplay;
     public GameObject cardPrefab;
     public GameObject cardContainer;
     public int remainingTurns = 4;
+    public Text help;
+
+    private void actualizeHelpText()
+    {
+        if (remainingTurns == 0)
+        {
+            help.text = "Sieh dir die Karten an, die du gezogen hast.";
+        }
+        else
+        {
+            help.text = "Ziehe " + remainingTurns + " Karten!";
+        }
+        
+    }
+
+    private void Start()
+    {
+        actualizeHelpText();
+    }
 
     public void ClickOnDeck()
     {
@@ -32,11 +50,10 @@ public class CardDeck : MonoBehaviour
         cards.Remove(pickedCard);
         remainingTurns -= 1; // is the same like remainingTurns = remainingTurns - 1; 
 
-        //cardDisplay.sprite = pickedCard.cardpicture;
-        //cardDisplay.gameObject.SetActive(true);
-        GameObject cardInScene = Instantiate(cardPrefab, cardContainer.transform);
-        cardInScene.GetComponent<Image>().sprite = pickedCard.cardpicture;
-        cardInScene.GetComponent<Button>().enabled = false;
+                GameObject cardInScene = Instantiate(cardPrefab, cardContainer.transform);
+        cardInScene.GetComponent<Card>().setDescription(pickedCard, true);
+        
+        actualizeHelpText();
 
 
         if (cards.Count == 0 || remainingTurns == 0) gameObject.SetActive(false);

@@ -7,7 +7,22 @@ using UnityEngine.Playables;
 public class Card : MonoBehaviour
 {
     //image of turned card
-    public Sprite cardpicture;
+    private CardDescription description;
+
+    //sets a new value to card display
+    //card is visible immediately
+    //param newDescription = new value of card
+    //param canBeClicked = when true -> play animation of turning card
+    public void setDescription(CardDescription newDescription, bool canBeClicked)
+    {
+        description = newDescription; 
+        if (!canBeClicked)
+        {
+            GetComponent<Image>().sprite = newDescription.cardpicture;
+        }
+         
+        GetComponent<Button>().enabled = canBeClicked;
+    }
 
 
     // Start is called before the first frame update
@@ -23,7 +38,7 @@ public class Card : MonoBehaviour
     }
     private bool CardTurned()
     {
-        return GetComponent<Image>().sprite == cardpicture;
+        return GetComponent<Image>().sprite == description.cardpicture;
     }
 
     private bool StartTurning()
@@ -45,7 +60,7 @@ public class Card : MonoBehaviour
         if (Application.isPlaying)
         {
             Debug.Log("change picture");
-            GetComponent<Image>().sprite = cardpicture;
+            GetComponent<Image>().sprite = description.cardpicture;
         }
     }
 }
