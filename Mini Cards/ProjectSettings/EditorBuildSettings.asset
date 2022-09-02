@@ -8,4 +8,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/The Game/Scenes/Main.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/The Game/Scenes/Tarot.unity
+    guid: 584d0d89f4d9c5d419945ec72b359a4a
   m_configObjects: {}
