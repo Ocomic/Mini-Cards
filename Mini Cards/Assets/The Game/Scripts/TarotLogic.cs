@@ -10,13 +10,25 @@ public class TarotLogic : MonoBehaviour
     {
         get { return container.Count; }
     }
+
     public Text help;
     public List<GameObject> container;
-
+    public bool pickAutomation = false;
+    
     private void Start()
     {
         actualizeHelpText();
+        if (pickAutomation)
+        {
+            while (remainingTurns > 0) { ClickOnDeck(); } 
+        }
+
+       
+
     }
+
+
+    
     private void actualizeHelpText()
     {
         if (remainingTurns == 0)
@@ -25,7 +37,15 @@ public class TarotLogic : MonoBehaviour
         }
         else
         {
-            help.text = "Ziehe " + remainingTurns + " Karten!";
+            if (remainingTurns == 1)
+            {
+                help.text = "Ziehe die letzte Karte";
+            }
+            else
+            {
+                help.text = "Ziehe " + remainingTurns + " Karten!";
+            }
+            
         }
     }
 

@@ -978,6 +978,7 @@ MonoBehaviour:
   - {fileID: 1968788944}
   - {fileID: 803366777}
   - {fileID: 56449397}
+  pickAutomation: 0
 --- !u!1 &1340639195
 GameObject:
   m_ObjectHideFlags: 0
