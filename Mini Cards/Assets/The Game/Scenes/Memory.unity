@@ -349,7 +349,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -241, y: 475.12}
+  m_AnchoredPosition: {x: -240.99994, y: 475.12}
   m_SizeDelta: {x: -1553.82, y: -1016.59}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &574753452
@@ -485,7 +485,6 @@ GameObject:
   - component: {fileID: 1230529733}
   - component: {fileID: 1230529737}
   - component: {fileID: 1230529736}
-  - component: {fileID: 1230529735}
   - component: {fileID: 1230529734}
   - component: {fileID: 1230529738}
   m_Layer: 5
@@ -535,62 +534,6 @@ MonoBehaviour:
   - cardpicture: {fileID: 21300000, guid: 60773244bceefdc4ca9b23e9c25f444a, type: 3}
   cardPrefab: {fileID: 6501651468222180783, guid: 2b36ee5dcc9bfd54eae326b5471ccdf2, type: 3}
   cardContainer: {fileID: 1498130624}
---- !u!114 &1230529735
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1230529732}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Navigation:
-    m_Mode: 3
-    m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Selected
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 1230529736}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1230529738}
-        m_TargetAssemblyTypeName: PickCard, Assembly-CSharp
-        m_MethodName: ClickOnDeck
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &1230529736
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -638,7 +581,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1230529732}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 23565d94b12309d49ab862aa3592a97f, type: 3}
+  m_Script: {fileID: 11500000, guid: 97d577667332ac141a8c53b01f21f0bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1498130624
@@ -677,7 +620,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 2.0499878, y: -47.5}
+  m_AnchoredPosition: {x: 2.0500488, y: -47.5}
   m_SizeDelta: {x: -44.72, y: -140.98}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1498130626
@@ -777,7 +720,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -565, y: 477.92}
+  m_AnchoredPosition: {x: -565.00006, y: 477.92}
   m_SizeDelta: {x: -1692.78, y: -1011}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1834456616
